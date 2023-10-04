@@ -10,6 +10,8 @@ loop do
   puts '2- Subtração.'
   puts '3- Multiplicação.'
   puts '4- Divisão.'
+  puts '5- X²'
+  puts '6- Raiz quadrada'
   puts '0- Sair.'
   print 'Digite sua escolha: '
 
@@ -46,6 +48,14 @@ loop do
     puts "Digite segundo numero"
     number2 = gets.chomp.to_f
     result = calculator.divide(number1, number2)
+  when op = 5
+    puts "Digite o numero que vc deseja elever ao quadrado"
+    number = gets.chomp.to_f
+    result = calculator.square(number)
+  when op = 6
+    puts "Digite o numero que vc deseja saber a raiz quadrada"
+    number = gets.chomp.to_f
+    result = calculator.squareroot(number)
   when op = 0
     break
   end

@@ -24,8 +24,20 @@ describe Calculator do
       expect(@calculator.multiply(3,4)).to eql(12)
     end
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               it "can divide the numbers using the divide method" do
+    it "can divide the numbers using the divide method" do
       expect(@calculator.divide(18,3)).to eql(6)
+    end
+
+    it "gives a warning if try to divide by zero" do
+      expect(@calculator.divide(2,0)).to eql("Você não pode dividir por zero")
+    end
+
+    it "can square the result of a number" do
+      expect(@calculator.square(2)).to eql(4)
+    end
+
+    it "can find the squareroot of a given number" do
+      expect(@calculator.squareroot(9)).to eql(3)
     end
   end
 end
